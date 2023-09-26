@@ -21,6 +21,7 @@ The LLm will generate conversation which will be fed to a translator AI for the 
 ## Want to try and use multilingual LLM
 - A multilingual model in its own right so I wouldn't have to translate the answers give, eliminating an unnecessary step
 - prompt construction "you are" {NPC information} "in " {language_selection} "write a response to" {user input} ?
+- for text to speech might want to use tts python package [OpenTTS](https://github.com/synesthesiam/opentts)
 
 this website shows python package for displaying pinyin based on characters, use in conjunction with multilingual LLM
 https://pypi.org/project/pinyin/
