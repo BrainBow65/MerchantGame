@@ -18,5 +18,15 @@ To run this program you need to have these packages installed
 The AI agents will act based on prompts fed to an LLM and their memories will be tracked by a memory stream list and retrieved based on relevance.
 The LLm will generate conversation which will be fed to a translator AI for the desired target language. Ideally a voice to text input for the player and a text to voice implementation for the AI responses to practice listening comprehension and speech. Until then only text input and generation will be displayed.
 
+## Want to try and use multilingual LLM
+- A multilingual model in its own right so I wouldn't have to translate the answers give, eliminating an unnecessary step
+- prompt construction "you are" {NPC information} "in " {language_selection} "write a response to" {user input} ?
+- for text to speech might want to use tts python package [OpenTTS](https://github.com/synesthesiam/opentts)
+- or [LovoAI](https://lovo.ai/?lmref=aQMezw), however this is not free
+- [Nvidia NeMo](https://github.com/NVIDIA/NeMo)
+
+this website shows python package for displaying pinyin based on characters, use in conjunction with multilingual LLM
+https://pypi.org/project/pinyin/
+
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/BrainBow65)
