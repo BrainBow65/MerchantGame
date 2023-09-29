@@ -1,13 +1,14 @@
 import torch
 import datetime
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from langchain import Chain
+from langchain import LLMChain
 
 class MemoryObject:
-    def __init__(self, description):
+    def __init__(self, description, emotion):  # Added emotion as an argument
         self.created_at = datetime.datetime.now()
         self.last_accessed_at = None
         self.description = description
+        self.emotion = emotion  # Added emotion attribute
         self.emotional_state = None
 
     def access_memory(self):
@@ -25,8 +26,8 @@ class NPC:
     def __str__(self):
         return f"Name: {self.name}\nTemperament: {self.temperament}\nIntelligence: {self.intelligence}\nDescription: {self.description}"
 
-    def add_memory(self, description):
-        memory_object = MemoryObject(description)
+    def add_memory(self, description, emotion):  # Added emotion as an argument
+        memory_object = MemoryObject(description, emotion)  # Pass emotion when creating a memory
         self.memory_stream.append(memory_object)
 
     def retrieve_memories(self, query_emotion, query_relevance):
