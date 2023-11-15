@@ -1,0 +1,68 @@
+# which model prompt
+Park, Joon Sung, Joseph C. O’Brien, Carrie J. Cai, Meredith Ringel Morris, Percy Liang, and Michael S. Bernstein. “Generative Agents: Interactive Simulacra of Human Behavior.” arXiv, April 6, 2023. [https://doi.org/10.48550/arXiv.2304.03442](https://doi.org/10.48550/arXiv.2304.03442).
+
+# integrate w/ unity
+Integrating large language models (LLM) and natural language processing (NLP) AI models from Hugging Face into a Unity game requires a few key steps. Here's a general guide to help you get started:
+
+### 1. Set Up Hugging Face Transformers Library:
+
+1. **Install Transformers Library:**
+   - Install the Hugging Face Transformers library using pip:
+     ```bash
+     pip install transformers
+     ```
+
+2. **Choose a Model:**
+   - Select a pre-trained LLM model from Hugging Face's model hub. Models like GPT-2, GPT-3, BERT, or others may be suitable depending on your specific requirements.
+
+### 2. Create a C# Wrapper:
+
+1. **Use Python in Unity (Python for Unity):**
+   - Unity primarily uses C# for scripting, but you can leverage Python for Unity to run Python code within your Unity project.
+   - Download and install the Python for Unity package.
+
+2. **Create a Python Script:**
+   - Write a Python script that interacts with the Hugging Face model using the Transformers library.
+   - This script will handle the natural language processing tasks.
+
+3. **Communication with C#:**
+   - Set up a communication mechanism between C# and Python scripts in Unity. This can be achieved using inter-process communication methods like sockets, named pipes, or Unity's Python for Unity API.
+
+### 3. Unity Integration:
+
+1. **Invoke Python Script from C#:**
+   - In your Unity C# script, invoke the Python script using the chosen communication mechanism. This might involve starting a Python process and sending input/output through the communication channel.
+
+2. **Handle Responses in Unity:**
+   - Parse the responses received from the Python script within your Unity C# script.
+   - Use the information obtained from the NLP model to influence the behavior or dialogue in your game.
+
+### 4. Unity UI Integration:
+
+1. **Display NLP Responses:**
+   - Integrate the NLP responses into the Unity UI to provide a seamless user experience.
+   - Update UI elements dynamically based on the output from the NLP model.
+
+### 5. Error Handling and Optimization:
+
+1. **Error Handling:**
+   - Implement proper error handling to manage scenarios where the NLP model fails to provide a response or encounters errors.
+
+2. **Optimization:**
+   - Optimize the communication between C# and Python scripts for performance, especially if the game requires real-time interactions.
+
+### Important Considerations:
+
+1. **Security:**
+   - Be cautious about integrating models that may have ethical or safety considerations. Ensure user interactions are appropriately managed.
+
+2. **Model Size and Latency:**
+   - Consider the size of the pre-trained model and the associated latency. Larger models may have longer inference times, impacting the responsiveness of your game.
+
+3. **License Compliance:**
+   - Ensure you comply with the licensing terms of the chosen pre-trained model.
+
+4. **Updates and Maintenance:**
+   - Stay informed about updates to the Hugging Face Transformers library and models. Regularly check for improvements, bug fixes, or new models that may enhance your game.
+
+Remember that this is a high-level guide, and the specific implementation details will depend on the chosen Hugging Face model, Unity version, and your game's requirements. It's also recommended to check for any updates or changes to the tools and libraries involved.
